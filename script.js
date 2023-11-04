@@ -29,7 +29,7 @@ const loginForm = document.getElementById('loginForm');
       } else {
         localStorage.removeItem('username');
         localStorage.removeItem('password');
-		existingButton.style.visibility = 'none';
+		existingButton.style.visibility = 'hidden';
       }
 
       alert(`Logged in as ${username}`);
