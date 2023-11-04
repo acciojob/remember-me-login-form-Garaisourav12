@@ -7,12 +7,12 @@ const loginForm = document.getElementById('loginForm');
     const existingButton = document.createElement('button');
     existingButton.textContent = 'Login as existing user';
     existingButton.id = 'existing';
-    existingButton.style.display = 'none';
+    existingButton.style.visibility = 'hidden';
 	
 
     // Check if saved user details exist in localStorage
     if (localStorage.getItem('username') && localStorage.getItem('password')) {
-      existingButton.style.display = 'block';
+      existingButton.style.visibility = 'visible';
     }
 
     document.body.appendChild(existingButton);
@@ -35,7 +35,7 @@ const loginForm = document.getElementById('loginForm');
 
       // If there are saved details, show existing button
       if (localStorage.getItem('username') && localStorage.getItem('password')) {
-        existingButton.style.display = 'block';
+        existingButton.style.visibility = 'visible';
       }
     });
 
