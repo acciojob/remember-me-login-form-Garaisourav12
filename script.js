@@ -8,6 +8,8 @@ const loginForm = document.getElementById('loginForm');
     existingButton.textContent = 'Login as existing user';
     existingButton.id = 'existing';
     existingButton.style.display = 'none';
+	localStorage.setItem('savedUsername', null);
+	localStorage.setItem('savedPassword', null);
 
     // Check if saved user details exist in localStorage
     if (localStorage.getItem('savedUsername') && localStorage.getItem('savedPassword')) {
